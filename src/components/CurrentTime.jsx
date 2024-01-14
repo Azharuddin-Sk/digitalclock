@@ -1,6 +1,7 @@
+import React from "react";
 import { useEffect, useState } from "react";
 
-let CurrentTime = () => {
+function CurrentTime() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -14,25 +15,22 @@ let CurrentTime = () => {
   }, []);
 
   return (
-    <div>
-      <p className="date">Date : {time.toDateString()}</p>
-      <div className="container">
-        <div className="clock">
-          <span id="hrs">
-            {(time.getHours() < 10 ? "0" : "") + time.getHours()}
-          </span>
-          <span>:</span>
-          <span id="min">
-            {(time.getMinutes() < 10 ? "0" : "") + time.getMinutes()}
-          </span>
-          <span>:</span>
-          <span id="sec">
-            {(time.getSeconds() < 10 ? "0" : "") + time.getSeconds()}
-          </span>
-        </div>
+    <div className="container">
+      <div className="clock">
+        <span id="hrs">
+          {(time.getHours() < 10 ? "0" : "") + time.getHours()}
+        </span>
+        <span>:</span>
+        <span id="min">
+          {(time.getMinutes() < 10 ? "0" : "") + time.getMinutes()}
+        </span>
+        <span>:</span>
+        <span id="sec">
+          {(time.getSeconds() < 10 ? "0" : "") + time.getSeconds()}
+        </span>
       </div>
     </div>
   );
-};
+}
 
 export default CurrentTime;

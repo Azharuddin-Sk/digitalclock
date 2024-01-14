@@ -1,12 +1,18 @@
+import React from "react";
+import ClockHeading from "./components/ClockHeading";
+import ClockSlogan from "./components/ClockSlogan";
+import CurrentDate from "./components/CurrentDate";
 import CurrentTime from "./components/CurrentTime";
 import "./App.css";
 
 function App() {
   return (
-    <center className="hero">
-      <h1>Digital Clock</h1>
+    <>
+      <ClockHeading />
+      <ClockSlogan />
+      <CurrentDate />
       <CurrentTime />
-    </center>
+    </>
   );
 }
 
